@@ -1,0 +1,185 @@
+Los tres estados.
+Working directory:
+El que trabajamos o perparamdo las cajas.
+Nuestro estado de trabajo actual. Donde se trabaja sin pensar para realizar una version.
+Para pasar al siguiente nivel el GIDADD comantos que nos permiten subir nuestro proyecto al
+staching-area.
+
+Steaching-area:
+Trabaja como una memoria ram. Agraga las cajas listas. 
+Sew prepara los elemento que queremos que formen parte de nuestro proyecto.
+Para pasar al siguiente nivel se necesita GIT COMMIT.
+Comandos que nos manda la primera version o otra version que lo llevara al repositorio.
+
+Repository:
+Registra o guarda todas las versiones de nustro cuento. 
+Registra los archivos.
+
+
+......................................................................................................
+Diferencias entre GIT y GITUB.
+GITHUB: es una red social que nos permite mostrar nustros proyectos.
+	Es la presentacion de nuestro trabajo.
+
+GIT: es un soft que nos permite alzar nustros proyectos a GITHUB.
+	Es nuetra mesa de trabajo.
+
+
+
+......................................................................................................
+Comandos.
+Para acceder a la terminal debemos intalar git. 
+Luego buscarlo y ejecutarlo y se abrira la terminal "git-bush".
+
+Comando basicos.
+pwd: muestra las rutas de las carpetas en la que estamos ahora.
+     Disco, usuario y donde estamos posicionados.
+	me dice donde estoy posicionado en mi computadora.
+
+ls: muestra todos los archivos dentro de una carpeta.
+    todo lo que hay dentro de una carpeta.
+
+cd: para cambiar el directorio o para movernos entre carpetas.
+    change directory. despues de un espacio se pone el nombre de la 
+    carpeta al que vamos a acceder.
+
+cd ../: vuelvo a una carpeta anterior o vuelvo un paso atras.
+
+mkdir: geneara una carpeta. se pone con un espacio el nomber de unacarpeta.
+       make-directory nameoffolder.
+
+touch: genera nuevos archivos. despues de un espacio el nombre del archivo y formato del doc.
+
+clear: limpia todo el historial de todo lo escrito.
+
+rm: elimina archivos. debe indicarse nombre y formato. antes debe ingresarse a la carpeta del doc.
+    tambien elimina carpetas.
+
+  : para abrir un archivo.
+
+Nunca crear en la raiz de los discos. 
+Hay que recorrer con cd y ls. o tirar la carpeta en la terminal.
+
+......................................................................................................
+Configurando GIT.
+Comandos para enlazar git con la computadora.
+git config --global user.name "nombre y apellido"
+
+git config --global user.email escribirmail
+
+Para cambiar el nombre.
+git config --global --uset-all user.name "nombreequivocado":
+
+git config --list: para ver si se enlazo el user y email.
+
+
+......................................................................................................
+Generando estados en la terminal.
+git init: para iniciar el libro o la documentacion del proyecto.
+
+git status: nos dice el estado de nuestro repositorio.
+	untracket signifiaca que no esta en el staching-directory.
+
+git add: permite añadir un archivo. en un espacio escribimos en nombre de la carpeta
+	de nuestro proyecto.
+
+git rm --cached: permite volver un paso anterior del doc. en espacio el nombre del espacio anterior.
+
+git add .: añade las modificaciones que realizamos al documento.
+	es decir que nos permite pasar al sugindo estado de git.
+
+git commit -m "": comando para guardar los capitulos de nuestro proyecto.
+	En la comilla el nombre o direcctorio del documento de nuestro proyecto.
+
+git log: hace aparecer el numero del commit o guaradado y el nombre de quien hizo 
+	el commit. mail y user.
+	muestra el historail del proyecto.
+
+git branch : genera una ramificacion de nuestro proyecto.
+	Se debe detallar como se va a llamar esa ramificacion poniendole un nombre luego de un 
+	espacio. Ej: GIT BANCH mi-rama
+	Si no ponemos un nombre este comando nos va a mostrar cuantas ramificaciones tenemos de 
+	nuestro proyecto. Es util si no nos acordamos de cuantas rama tenemos.
+
+git checkout : nos permite movernos entre ramimificaciones del proyecto.
+	Solo debemos poner el nombre de la rama luego de un espacio.
+	EJ: GIT CHECKOUT mi-rama 
+
+git commit -am "": nos permite guardar los cambios de nustras ramificaciones sin la necesidad
+	de realizar GIT ADD . ni GIT COMMIT -m ""
+
+git merge : se utiliza para unir ramas entre si o unir ramas al codigo master.
+	Debemos detallar el nombre de la rama luego de un espacio, ej: GIT MARGE mi-rama
+	Siempre debemos ubicarnos en la rama que va a recivir la union, ya que en el git merge
+	llamamos a la otra rama.
+
+git branch -M : comando para cambiar el nombre de la rama.
+	Debemos ubicarnos en la rama al cual le queremos cambiar el nombre.
+	Ej: cambiarle el nombre al proyecto master a main.
+		GIT BRANCH -M main
+	debemos poner luego de -m el nombre de como se va a llamar apartir de ahora.
+
+git remote add origin https://github.com/pablo-gimenezg1/mi-prueba.git: 
+	Nos permite enlazar nuestro proyecto local al repositorio de la URL.
+	Es decir que nos permite alzar nuestro proyecto al GITHUB dentro de un repositorio
+	creado en github.
+
+git push -u origin : nos permite subir o empujar nuestro proyecto de manera local al repository 
+	remoto.
+	Debemos detallar si sera en una ramificaion o en el proyecto main.
+	Ej: git push -u add origin main
+
+......................................................................................................
+Ramificacion den GIT.
+Que es? 
+Git nos permite realizar diferentes versiones de nuestro proyecto para asi si queremos probar 
+una nueva propiedad o realizar actualizaciones, no afectemos al codigo main.
+Pedemos generar versiones o desvios de un proyecto, gerenado "multiversos".
+
+Para que sirve.
+Para realizar preubas de manera paralela sin afectar el codigo main.
+
+Unir codigos de prueba al main.
+A esta situacion, cuando nos guta algo de una ramificacion y lo queremos añadir al codigo mail, 
+se le llama "MERGEL" o "MERGEO"
+El codigo mail en git nos aparecera como master una vez inicializado el GIT INIT.
+
+
+Como generar una ramificacion en nuestro proyecto con git.
+Se debe utilizar el siguente comando.
+Cuando demos enter al comando nos va a cambiar el nombre del pryecto al nombre de la rama 
+y va a estar pintado en azul.
+
+Para cambiar de ramas en ramas se debe primero realizar el GIT COMMIT o guardado.
+
+git brach : genera una ramificacion de nuestro proyecto.
+	Se debe detalla como se va allamar esa ramificacion poniendole un nombre luego de un 
+	espacio. Ej: mi-rama
+	Si no ponemos un nombre este comando nos va a mostrar cuantas ramificaciones tenemos de 
+	nuestro proyecto.
+
+Como unir las ramificaciones o unir ramas al main/master:
+Primeramente debemos estar en la rama que va a recibir la union o en el master, si queremeos 
+unir una rama al main.
+luego utilizar GIT MERGE nombre de la rama.
+
+Antes de unir las ramas de debe guardas los cambios realizados en cada una, luego utilizar el 
+comando y luego guardarlo de nuevo.
+
+......................................................................................................
+Como subir los proyectos al repository de GITHUB.
+debemos utilizar el comando:
+
+git remote add origin https://github.com/pablo-gimenezg1/mi-prueba.git: 
+	Nos permite enlazar nuestro proyecto local al repositorio de la URL.
+	Es decir que nos permite alzar nuestro proyecto al GITHUB dentro de un repositorio
+	creado en github.
+
+git push -u origin : nos permite subir o empujar nuestro proyecto de manera local al repository 
+	remoto.
+	Debemos detallar si sera en una ramificaion o en el proyecto main.
+	Ej: git push -u add origin main
+
+Si ya generamos esto, pero queremos segtuir cambiando o realizando codigos.
+Debemos realizar GIT STATUS, GIT ADD ., luego GIT COMMIT -M "nombre del commit", luego GIT PUSH
+para subir los camios al github
